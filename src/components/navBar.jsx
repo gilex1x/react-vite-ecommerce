@@ -1,29 +1,28 @@
 import { NavLink } from "react-router-dom";
 
 const NavBarTemplate = ({ children }) => {
-    let activeStyle = {
-        textDecoration: "underline"
-    }
+    let activeStyle = "underline underline-offset-4"
+   
     return (
         <nav className="flex items-center justify-between w-full py-4 px-8 font-light text-sm">
             <ul className="flex items-center gap-4">
                 <li>
-                    <NavLink to='/' style={({isActive})=>isActive ? activeStyle : undefined}>
+                    <NavLink to='/' className={({isActive})=>isActive ? activeStyle : undefined}>
                         Shopi
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/all' style={({isActive})=>isActive ? activeStyle : undefined}>
+                    <NavLink to='/all' className={({isActive})=>isActive ? activeStyle : undefined}>
                         All
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/clothes' style={({isActive})=>isActive ? activeStyle : undefined}>
+                    <NavLink to='/clothes' className={({isActive})=>isActive ? activeStyle : undefined}>
                         Clothes
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/electronic' style={({isActive})=>isActive ? activeStyle : undefined}>
+                    <NavLink to='/electronic' className={({isActive})=>isActive ? activeStyle : undefined}>
                         Electronics
                     </NavLink>
                 </li>
