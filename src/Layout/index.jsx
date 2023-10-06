@@ -1,6 +1,6 @@
 const Layout =({children})=>{
     return (
-        <section className='flex-col mt-8 items-center text-center'>
+        <section className=' flex flex-col mt-8 items-center text-center'>
             {children}
         </section>
     )
