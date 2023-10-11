@@ -1,10 +1,13 @@
-import { XMarkIcon} from '@heroicons/react/24/solid'
+import { useContext } from 'react';
+import { XMarkIcon} from '@heroicons/react/24/solid';
+import { shoppingCardContext } from '../context';
 const ProductDetail = () => {
+    const context = useContext(shoppingCardContext);
     return (
-        <aside className="flex flex-col fixed right-0 top-[60px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-60px)]">
+        <aside className={`${context.isDetailOpen ? 'flex': 'hidden'} flex-col fixed right-0 top-[60px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-60px)]`}>
             <div className='flex justify-between items-center p-4'>
                 <h2 className='font-medium text-xl'>Details</h2>
-                <button>
+                <button onClick={()=>context.handleCloseDetail()}>
                     <XMarkIcon className='h-6 w-6 text-blue-500' />
                 </button>
             </div>
