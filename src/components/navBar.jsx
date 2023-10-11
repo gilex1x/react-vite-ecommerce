@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { shoppingCardContext } from "../context";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
 
 const NavBarTemplate = () => {
@@ -48,8 +49,9 @@ const NavBarTemplate = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'>
-                        Cart {context.count}
+                    <NavLink to='/' className='flex'>
+                        <ShoppingCartIcon className='h-4 w-4 text-blue-500'/>
+                         {context.count}
                     </NavLink>
                 </li>
             </ul>

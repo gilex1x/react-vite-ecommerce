@@ -16,12 +16,13 @@ const Home = () => {
     }, []);
     return (
         <>
-            {loading ? "...Loading" : <section className='grid gap-8 grid-cols-5 w-full max-w-screen-xl'>
-                <ProductDetail/>
-                {
-                    items?.map(product => <Card key={product.id} {...product} />)
-                }
-            </section>}
+            {loading ? "...Loading" :
+                <section className='grid gap-8 grid-cols-4 w-full max-w-screen-lg'>
+                    <ProductDetail />
+                    {
+                        items?.map(product => <Card key={product.id} {...product} />)
+                    }
+                </section>}
         </>
     );
 };
