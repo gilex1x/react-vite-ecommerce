@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { shoppingCardContext } from "../context";
 import { NavLink } from "react-router-dom";
-const NavBarTemplate = ({ children }) => {
+
+const NavBarTemplate = () => {
     const context = useContext(shoppingCardContext);
     let activeStyle = "underline underline-offset-4"
    

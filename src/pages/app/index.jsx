@@ -1,6 +1,5 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom';
 import { ShoppingCardProvider } from '../../context';
-import { useState } from 'react';
 import Home from '../home';
 import MyAccount from '../myAccount';
 import MyOrder from '../myOrder';
@@ -23,7 +22,7 @@ const AppRouter = () => {
 }
 
 function App() {
-  const [count, setCount] = useState(0);
+
   return (
     <ShoppingCardProvider>
       <BrowserRouter>
