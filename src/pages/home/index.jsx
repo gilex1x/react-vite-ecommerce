@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <>
             {loading ? "...Loading" :
-                <section className='grid gap-8 grid-cols-4 w-full max-w-screen-lg'>
+                <section className='grid gap-12 grid-cols-4 w-full max-w-screen-lg'>
                     <ProductDetail />
                     {
                         items?.map(product => <Card key={product.id} {...product} />)
