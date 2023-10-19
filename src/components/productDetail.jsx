@@ -5,7 +5,6 @@ const ProductDetail = () => {
     const context = useContext(shoppingCardContext);
     const { rating, price, title, description, image } = context.productToShow;
     let stars = '⭐'.repeat(Math.floor(rating?.rate || 5));
-    console.log(rating)
     return (
         <aside className={`${context.isDetailOpen ? 'flex' : 'hidden'} flex-col fixed right-0 top-[60px] border bg-white border-black rounded-lg w-[360px] h-[calc(100vh-60px)]`}>
             <div className='flex justify-between items-center p-4'>

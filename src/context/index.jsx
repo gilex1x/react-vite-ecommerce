@@ -11,7 +11,10 @@ export const ShoppingCardProvider = ({ children }) => {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const handleOpenDetail = () => setIsDetailOpen(true);
   const handleCloseDetail = () => setIsDetailOpen(false);
-  const [productToShow, setProductToShow] = useState({})
+  //product to show
+  const [productToShow, setProductToShow] = useState({});
+  //cart
+  const [cartData,setCartData]=useState([])
   return (
     <shoppingCardContext.Provider value={{
       count,
@@ -20,7 +23,9 @@ export const ShoppingCardProvider = ({ children }) => {
       handleOpenDetail,
       handleCloseDetail,
       productToShow,
-      setProductToShow
+      setProductToShow,
+      cartData,
+      setCartData
     }}>
       {children}
     </shoppingCardContext.Provider>
