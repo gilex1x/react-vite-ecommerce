@@ -6,8 +6,10 @@ import { NavLink } from "react-router-dom";
 
 const NavBarTemplate = () => {
     const context = useContext(shoppingCardContext);
-    let activeStyle = "underline underline-offset-4"
-
+    let activeStyle = "underline underline-offset-4";
+    let handleCartClick = () => {
+        context.isCheckoutOpen ? context.handleCloseCheckout() : context.handleOpenCheckout();
+    }
     return (
         <nav className="flex items-center justify-between w-full py-4 px-8 font-light text-sm">
             <ul className="flex items-center gap-4">
@@ -49,7 +51,7 @@ const NavBarTemplate = () => {
                     </NavLink>
                 </li>
                 <li className='flex'>
-                    <button>
+                    <button onClick={handleCartClick}>
                         <ShoppingCartIcon className='h-4 w-4 text-blue-500' />
                     </button>
                     {context.count}

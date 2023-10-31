@@ -11,6 +11,10 @@ export const ShoppingCardProvider = ({ children }) => {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const handleOpenDetail = () => setIsDetailOpen(true);
   const handleCloseDetail = () => setIsDetailOpen(false);
+  //Is Open/close CheckOut
+  const [isCheckoutOpen, setisCheckoutOpen] = useState(false);
+  const handleOpenCheckout = () => setisCheckoutOpen(true);
+  const handleCloseCheckout = () => setisCheckoutOpen(false);
   //product to show
   const [productToShow, setProductToShow] = useState({});
   //cart
@@ -25,7 +29,10 @@ export const ShoppingCardProvider = ({ children }) => {
       productToShow,
       setProductToShow,
       cartData,
-      setCartData
+      setCartData,
+      isCheckoutOpen,
+      handleCloseCheckout,
+      handleOpenCheckout
     }}>
       {children}
     </shoppingCardContext.Provider>

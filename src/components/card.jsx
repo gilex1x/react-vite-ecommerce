@@ -6,13 +6,14 @@ const Card = ({ price, title, category, image, description, rating }) => {
     const context = useContext(shoppingCardContext);
     const handleShowProduct = () => {
         context.handleOpenDetail();
-        context.setProductToShow({ price, title, category, image, description, rating })
+        context.setProductToShow({ price, title, category, image, description, rating });
     };
 
     const handleAddProductToCart = (event) => {
         context.setCount(context.count + 1);
         context.setCartData([...context.cartData, { price, title, category, image, description, rating }]);
         console.log('Cart:', context.cartData);
+        context.handleOpenCheckout();
         event.stopPropagation();
     }
     return (
